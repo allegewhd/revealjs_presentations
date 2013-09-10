@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="author" content="phi">
+
+<title>Salesforce developer conference tokyo 2013参加報告会</title>
+
+<!-- <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css"> -->
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="lib/zenburn.css">
+
+</head>
+
+<body>
+
+<div id="reveal">
+    <div class="slides">
+
+        <section>
+            <h1>参加報告</h1>
+            <h3 class="inverted">Salesforce developer conference Tokyo 2013</h3>
+            <p>
+            2013年9月6日（金）<br />
+            JPタワーホール＆カンファレンス４F<br />
+            </p>
+        </section>
+
+        <section>
+            <h3><a href="http://jp.force.com/devcon/2013/">特設サイト</a></h3>
+            <p>
+            本カンファレンスでは<strong>モバイル x クラウド</strong>に焦点を当て、HerokuやForce.comを中心としたモバイル開発手法についてのセッションが行われます。
+            </p>
+        </section>
+
+        <section>
+            <h3>参加したセッション</h3>
+            <ol>
+                <li>THE REINVENTION OF APPS (keynote, マーケティングの話)</li>
+                <li>組込み向けRuby処理系mrubyの可能性 (まつもとゆきひろ Rubyの父、Herokuチーフアーキテクト)</li>
+                <li>HeliosとHerokuを使ったiOSアプリの構築 (MBaas on Heroku)</li>
+                <li>Herokuを利用したInternet of Things事例 (一番面白いセッション)</li>
+                <li>B2Cから見たモバイルアプリケーション開発のいまとこれから (伊藤 直也 氏)</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>THE REINVENTION OF APPS</h2>
+            <p align="left">
+            force.comはPassからopen platformに変化しつつである。<br />
+            新規システム構築以外、既存システムの連携を重視する。<br />
+            現在毎日12億のトランザクションに半分ぐらいAPIからのアクセスである。<br />
+            </p>
+            <hr />
+            <p class="fragment" align="left">
+            なお、本日のテーマはモバイルである。<br />
+            最新のForce.comバージョンでモバイルアプリをすぐ作成できるようになる。<br />
+            Chatterでリアタイムで変更を確認できることをデモした。オフラインでもアプリを操作できる。<br />
+            </p>
+        </section>
+
+        <section>
+            <h3>組込み向けRuby処理系mrubyの可能性</h3>
+            <ol>
+                <li>コードもデモも無し、単純な技術トーク</li>
+                <li>コンピュータの歴史を振り返すから、組込みシステム開発の変遷を説明する</li>
+                <li>システム開発は目覚ましい進化している一方、組込みシステムの開発は大きく変化していない</li>
+                <li>ただ、スマホの普及とともに、ここ2年から組込みシステムの環境も大きく進化しつつである</li>
+                <li>最新の冷蔵庫など32MByteのメモリを持って、ruby実行の環境を整っているか</li>
+                <li>アセンブリ、Cなどの敷居が高い組込みシステム開発でOOPのrubyも使えるため、mrubyを開発した</li>
+            </ol>
+            <hr />
+            <p class="fragment" align="left">
+            参加者は営業またマーケティングの人が多いので、技術カンファレンスの雰囲気が薄かった<br />
+            </p>
+        </section>
+
+        <section>
+            <h3>HeliosとHerokuを使ったiOSアプリの構築 (MBaas on Heroku)</h3>
+            <ol>
+                <li><a href="http://helios.io/" target="_blank">helios</a>, an extensible open-source mobile backend framework</li>
+                <li>あと伊藤直也さんの話と絡んでいる。MBaasのフレームワーク・サービスである。</li>
+                <li>開発者Mattt Thompson(米国Heroku在籍)は紹介する</li>
+                <li>ユーザ認証登録、データ同期、プッシュ通知、アプリ内購買、ログと分析などのモバイル・アプリバックエンド機能をサービスとして提供する。（一部有料）</li>
+                <li>開発者はUX専念できる環境を整っている。</li>
+                <li>Herokuで数分間にバックエンドアプリを作成するデモ</li>
+            </ol>
+        </section>
+
+        <section>
+            <section>
+                <h2>Herokuを利用したInternet of Things事例</h2>
+                <ol>
+                    <li>モバイルとクラウドの可能性</li>
+                    <li>デモ概要</li>
+                    <li>システム構造</li>
+                    <li>QA</li>
+                </ol>
+            </section>
+            <section>
+                <h3>モバイルとクラウドの可能性</h3>
+                <p>
+                <img src="img/heroku_force.png">
+                </p>
+            </section>
+            <section>
+                <h3>デモ概要</h3>
+                <p>
+                <img src="img/sensors.png">
+                </p>
+                <p>
+                4センサー(3つは温度、湿度と気圧を計測する、1つはRaspberry Piで通信ルーターとする)<br />
+                </p>
+            </section>
+            <section>
+                <h3>デモ概要</h3>
+                <p>
+                <img height="400" src="img/conrol_panel.png">
+                </p>
+                <p>
+                Webアプリにリアルタイムでセンサーの数値を更新して表示する。<br />
+                </p>
+            </section>
+            <section>
+                <h3>デモ概要</h3>
+                <ol>
+                    <li>環境制限でセンサーはwifi機能を持っていない</li>
+                    <li>FMラジオ帯でルーターに送信する(極端な環境を考える)</li>
+                    <li>アプリでセンサーの数値をリアルタイムで表示する</li>
+                    <li>アプリでセンサーの異常をアラートする</li>
+                    <li>アプリでセンターを再起動できる</li>
+                </ol>
+            </section>
+            <section>
+                <h3>システム構造</h3>
+                <p>
+                <img height="400" src="img/app_structure.png">
+                </p>
+                <p>
+                センサーは<a href="http://ja.wikipedia.org/wiki/ZigBee">ZigBee</a>プロトコルでルーターと通信する<br />
+                ルーターは<a href="http://mqtt.org/">MQTT</a>プロトコルでHerokuのAddonと通信し、HerokuのAddonでForceアプリと通信する<br />
+                </p>
+            </section>
+            <section>
+                <h2>QA</h2>
+                <ul align="left">
+                    <li>通信距離、省電力の考え</li>
+                    <li>セキュリティの考慮（省電力のため、MQTTとZigBeeのメッセージが平文である）</li>
+                    <li>セキュリティの考慮（センターの有効性チェック）</li>
+                    <li>車システムに応用できるか（いいえ、車はスーパーパソコンと思う。組み込み環境の反面と見られる）</li>
+                </ul>
+            </section>
+        </section>
+
+        <section>
+            <h3>B2Cから見たモバイル<br />アプリケーション開発のいまとこれから</h3>
+            <p>
+            伊藤直也氏(元はてなCTO、GREEプラットフォーム統括事業本部長)
+           </p>
+           <p>
+           <a href="https://speakerdeck.com/naoya/b2cmobairukai-fa-falseimatokorekara-number-forcedotcomjp" target="_blank">公開されているスライドへのリンク</a>
+           </p>
+        </section>
+
+        <section>
+            <h3>まとめ</h3>
+            <ul>
+                <li>モバイルとクラウドの融合は加速している</li>
+                <li>これからの企業システムにモバイル開発が必須になる</li>
+                <li>パッケージ販売ではなく、プラットフォームとしてユーザーにサービスを提供する</li>
+                <li>Open sourceの力はますます強くなる。(SalesforceはHerokuを買収することから見える)</li>
+                <li>MBaasのような新しいサービスを活発化になる</li>
+                <li>どんな時代も短期間かつ低コストでサービスを提供できる方は勝ち組である（自動化でALM管理はHerokuなどのPaasの強みである）</li>
+            </ul>
+        </section>
+
+        <section>
+            <h1>おわり</h1>
+            <h3 class="inverted">By Haidong Wang</h3>
+        </section>
+
+    </div>
+
+    <!-- コントローラ(現状これがないと動かない) -->
+    <aside class="controls">
+        <a class="left" href="#">&#x25C4;</a>
+        <a class="right" href="#">&#x25BA;</a>
+        <a class="up" href="#">&#x25B2;</a>
+        <a class="down" href="#">&#x25BC;</a>
+    </aside>
+
+    <!-- プログレスバー -->
+    <div class="progress"><span></span></div>
+
+</div>
+
+<script src="js/reveal.js"></script>
+<script src="lib/highlight.js"></script>
+<script>
+// クエリ優先
+var query = {};
+location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
+        query[ a.split('=').shift() ] = a.split('=').pop();
+        } );
+
+// Reveal を初期化
+Reveal.initialize({
+        // 画面右下にある十字キーみたいなやつの表示/非表示(false)
+controls: (query.controls) ? (query.controls=="true") : true,
+
+// 画面下にあるページ進行状態を表すバーの表示/非表示(false)
+progress: (query.progress) ? (query.progress=="true") : true,
+
+// ハッシュタグ(url の #~)でページ位置を記憶するかどうかのフラグ(false)
+history: (query.history) ? (query.history=="true") : true,
+
+// transition の変化の感じ
+transition: query.transition || "concave",  // default/concave/linear/cube/page
+
+// テーマ切り替え
+theme: query.theme || "default",    // default/neon
+
+// リンク(aタグ)にマウスを乗っけた時に 3D 演出をするかどうかのフラグ(true)
+rollingLinks: (query.rollingLinks) ? (query.rollingLinks=="true") : true,
+});
+
+// コードハイライト
+hljs.initHighlightingOnLoad();
+</script>
+
+</body>
+</html>
